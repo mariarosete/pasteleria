@@ -1,6 +1,6 @@
 # 🧁 Pastelería Creativa – FlowDocument + DataGrid (WPF)
 
-![Banner Pastelería Creativa](https://placehold.co/1200x400?text=Pasteleria+Creativa+-+FlowDocument+%2B+DataGrid)
+![Banner Pastelería Creativa](https://github.com/mariarosete/pasteleria/blob/main/screenshots/pasteleria.png?raw=true)
 
 Proyecto de interfaz desarrollado con **WPF** orientado al mundo de la **pastelería creativa**, compuesto por dos partes principales:
 
