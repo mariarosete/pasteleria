@@ -103,7 +103,6 @@ Incluye:
 ![.NET](https://img.shields.io/badge/.NET-512BD4?style=for-the-badge&logo=.net&logoColor=white)
 ![XAML](https://img.shields.io/badge/XAML-0C54C2?style=for-the-badge&logo=windows&logoColor=white)
 ![FlowDocument](https://img.shields.io/badge/FlowDocument-WPF-blue?style=for-the-badge)
-![DataGrid](https://img.shields.io/badge/DataGrid-WPF-purple?style=for-the-badge)
 ![Access](https://img.shields.io/badge/Microsoft%20Access-A4373A?style=for-the-badge&logo=microsoft-access&logoColor=white)
 
 ---
