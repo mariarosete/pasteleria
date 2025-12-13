@@ -2,10 +2,10 @@
 
 ![Banner Pastelería Creativa](https://github.com/mariarosete/pasteleria/blob/main/screenshots/pasteleria.png?raw=true)
 
-Proyecto de interfaz desarrollado con **WPF** orientado al mundo de la **pastelería creativa**, compuesto por dos partes principales:
+Proyecto de interfaz desarrollado con **WPF (C#)** orientado al mundo de la **pastelería creativa**, compuesto por dos partes principales:
 
-1) Un **FlowDocument** interactivo con secciones formateadas, imágenes y acciones (guardar/cargar/imprimir).  
-2) Una aplicación de **Acceso a Datos** con **DataGrid** para gestionar posts/postres mediante operaciones **CRUD**.
+1) Un **FlowDocument** interactivo con secciones formateadas, imágenes y acciones (guardar, cargar e imprimir).  
+2) Una aplicación de **Acceso a Datos** con **DataGrid**, conectada a una base de datos **Microsoft Access**, para gestionar postres mediante operaciones **CRUD**.
 
 ---
 
@@ -23,13 +23,14 @@ Proyecto de interfaz desarrollado con **WPF** orientado al mundo de la **pastele
 ### 💾 Acciones del documento
 - Botones: **Guardar**, **Cargar**, **Eliminar**, **Imprimir**.
 - Permite guardar el documento, eliminarlo y volver a cargarlo.
+- Opción de **impresión directa** del contenido del FlowDocument.
 
 ### 🎯 Interactividad y triggers
 - **Trigger por propiedad**: al pasar el ratón por encima de un botón:
-  - Aumenta el tamaño del botón
+  - Aumenta su tamaño
   - Cambia la fuente a **negrita**
 - Sección de **imágenes destacadas** organizada en columnas.
-- **Trigger por evento**: al hacer clic sobre una imagen, cambia su tamaño.
+- **Trigger por evento**: al hacer clic sobre una imagen, esta cambia su tamaño.
 
 ### 🎨 Formato y diseño del contenido
 - Texto organizado en **varias columnas** con línea divisoria.
@@ -50,17 +51,18 @@ Proyecto de interfaz desarrollado con **WPF** orientado al mundo de la **pastele
 ## 📊 DataGrid – Acceso a Datos (CRUD)
 
 ### 🗃️ Información gestionada
-La base de datos contiene registros con **7 campos**, incluyendo:
-- Nombre
-- Chef
-- Tipo
-- Imagen
-- Tiempo de preparación
-- Dificultad
-*(y el campo restante según tu modelo)*
+La aplicación trabaja con una base de datos **Microsoft Access (`recetas.accdb`)**, que contiene registros con los siguientes campos:
+
+- Id  
+- Nombre  
+- Chef  
+- Tipo  
+- Imagen  
+- Tiempo de preparación  
+- Dificultad  
 
 ### 🧭 Navegación por registros
-- Desplazamiento por registros mediante:
+- Desplazamiento por los registros mediante:
   - Menú de navegación
   - Botones
   - Menú contextual
@@ -78,9 +80,9 @@ Disponible desde:
 - Menú contextual
 
 Incluye:
-- Inserción de un nuevo registro (aparece seleccionado)
-- Modificación de un registro existente
-- Eliminación con **mensaje de confirmación**
+- Inserción de nuevos registros (aparecen seleccionados automáticamente).
+- Modificación de registros existentes.
+- Eliminación con **mensaje de confirmación**.
 
 ---
 
@@ -88,9 +90,9 @@ Incluye:
 
 - Estilo global de ventana aplicado a toda la aplicación.
 - En botones:
-  - **Trigger por propiedad**: al pasar el ratón cambia el color del texto y lo subraya.
-  - **MultiTrigger**: cambia el color de fuente y aumenta su tamaño.
-  - **Animación**: efecto de aumento de tamaño del botón.
+  - **Trigger por propiedad**: cambia el color del texto y lo subraya al pasar el ratón.
+  - **MultiTrigger**: cambia el color de la fuente y aumenta su tamaño.
+  - **Animación**: efecto visual de aumento de tamaño del botón.
 
 ---
 
@@ -102,6 +104,7 @@ Incluye:
 ![XAML](https://img.shields.io/badge/XAML-0C54C2?style=for-the-badge&logo=windows&logoColor=white)
 ![FlowDocument](https://img.shields.io/badge/FlowDocument-WPF-blue?style=for-the-badge)
 ![DataGrid](https://img.shields.io/badge/DataGrid-WPF-purple?style=for-the-badge)
+![Access](https://img.shields.io/badge/Microsoft%20Access-A4373A?style=for-the-badge&logo=microsoft-access&logoColor=white)
 
 ---
 
@@ -109,9 +112,9 @@ Incluye:
 
 - Practicar el diseño de documentos avanzados con **FlowDocument**.
 - Aplicar estilos, columnas, tablas, imágenes y enlaces.
-- Implementar **interacciones** con triggers y eventos.
-- Desarrollar una aplicación de **acceso a datos** usando **DataGrid**.
-- Implementar operaciones **CRUD** completas con una interfaz consistente.
+- Implementar **interacciones** mediante triggers y eventos en WPF.
+- Desarrollar una aplicación de **acceso a datos** con **DataGrid** y **Microsoft Access**.
+- Implementar operaciones **CRUD** completas con una interfaz consistente y usable.
 
 ---
 
@@ -119,7 +122,7 @@ Incluye:
 
 1. Abre la solución en **Visual Studio**.
 2. Asegúrate de tener instalado **.NET** y las herramientas de **WPF**.
-3. Configura la conexión a la base de datos (si aplica).
+3. Verifica la ruta de acceso a la base de datos **`recetas.accdb`** en la configuración del proyecto.
 4. Ejecuta el proyecto desde Visual Studio.
 
 ---
@@ -141,3 +144,4 @@ Incluye:
 ---
 
 <p align="center">Desarrollado con ❤️ por <b>María Rosete Suárez</b></p>
+
