@@ -1,0 +1,167 @@
+﻿<FlowDocument xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+              Background="#fff7e6"
+              FontFamily="Georgia"
+              PagePadding="20"
+              ColumnWidth="600" ColumnRuleBrush="Black" ColumnRuleWidth="3">
+
+    <!-- Título -->
+    <Section FontSize="28" FontWeight="Bold" TextAlignment="Center" Foreground="#d35400">
+        <Paragraph>Decoraciones Creativas para Pasteles</Paragraph>
+    </Section>
+
+    <!-- Descripción -->
+    <Paragraph FontSize="16">
+        Aprende las mejores técnicas para decorar pasteles y llevar tus habilidades a un nivel profesional. 
+        Transforma un pastel sencillo en una obra maestra con toques creativos.
+        Explora técnicas innovadoras como el uso de fondant, la pintura en pasteles y la creación de flores comestibles para impresionar a tu invitación.
+    </Paragraph>
+
+    <!-- Decoraciones Destacadas -->
+    <Section FontSize="20" FontWeight="Bold" Foreground="#8B4513">
+        <Paragraph>Decoraciones destacadas:</Paragraph>
+    </Section>
+
+    <!-- Tabla con decoraciones -->
+    <Table>
+        <Table.Columns>
+            <TableColumn Width="*"/>
+            <TableColumn Width="*"/>
+            <TableColumn Width="*"/>
+        </Table.Columns>
+        <TableRowGroup>
+            <TableRow Background="#FFDAB9">
+                <TableCell>
+                    <Paragraph FontWeight="Bold">Categoría</Paragraph>
+                </TableCell>
+                <TableCell>
+                    <Paragraph FontWeight="Bold">Decoración</Paragraph>
+                </TableCell>
+                <TableCell>
+                    <Paragraph FontWeight="Bold">Descripción</Paragraph>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell>
+                    <Paragraph>Fondant</Paragraph>
+                </TableCell>
+                <TableCell>
+                    <Paragraph>Flores de fondant</Paragraph>
+                </TableCell>
+                <TableCell>
+                    <Paragraph>Decoraciones detalladas hechas de pasta de azúcar que pueden ser modeladas en varias formas.</Paragraph>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell>
+                    <Paragraph>Crema</Paragraph>
+                </TableCell>
+                <TableCell>
+                    <Paragraph>Rosas de crema</Paragraph>
+                </TableCell>
+                <TableCell>
+                    <Paragraph>Un toque suave de crema pastelera para dar elegancia y color a cualquier pastel.</Paragraph>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell>
+                    <Paragraph>Chocolate</Paragraph>
+                </TableCell>
+                <TableCell>
+                    <Paragraph>Decoración de chocolate</Paragraph>
+                </TableCell>
+                <TableCell>
+                    <Paragraph>Chocolate derretido para crear decoraciones como hilos o figuras sobre la tarta.</Paragraph>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell>
+                    <Paragraph>Frutas</Paragraph>
+                </TableCell>
+                <TableCell>
+                    <Paragraph>Frutas frescas</Paragraph>
+                </TableCell>
+                <TableCell>
+                    <Paragraph>Usa frutas frescas para darle un toque natural y delicioso al pastel.</Paragraph>
+                </TableCell>
+            </TableRow>
+        </TableRowGroup>
+    </Table>
+
+    <!-- Consejos para Decorar -->
+    <Section FontSize="20" FontWeight="Bold" Foreground="#8B4513">
+        <Paragraph>Consejos para decorar tus pasteles:</Paragraph>
+    </Section>
+
+    <List MarkerStyle="Square">
+        <ListItem>
+            <Paragraph>Asegúrate de que el pastel esté completamente enfriado antes de comenzar a decorarlo.</Paragraph>
+        </ListItem>
+        <ListItem>
+            <Paragraph>Usa una base de pastel estable para evitar que las decoraciones se deslicen.</Paragraph>
+        </ListItem>
+        <ListItem>
+            <Paragraph>Practica tus técnicas de decoración en un trozo de papel encerado antes de hacerlo sobre el pastel.</Paragraph>
+        </ListItem>
+        <ListItem>
+            <Paragraph>Practica tus técnicas de decoración en un trozo de papel encerado antes de hacerlo sobre el pastel.</Paragraph>
+        </ListItem>
+    </List>
+
+    <!-- Imágenes de Decoraciones  -->
+    <Section FontStyle="Italic" Foreground="WhiteSmoke" FontFamily="Segoe Script" 
+      FontWeight="Bold" TextAlignment="Center" Background="#59252F">
+        <Paragraph>
+            Decoraciones
+        </Paragraph>
+     </Section>
+    <Paragraph>
+        Decoraciones para tus pasteles con un toque especial.  
+    Encuentra inspiración para embellecer tus creaciones con detalles únicos, colores vibrantes y estilos elegantes.  
+    Desde diseños clásicos hasta innovaciones modernas, dale a cada pastel un acabado espectacular.
+    </Paragraph>
+
+    <Table>
+        <Table.Columns>
+            <TableColumn Width="*"/>
+            <TableColumn Width="*"/>
+        </Table.Columns>
+        <TableRowGroup>
+            <TableRow>
+                <TableCell>
+                    <BlockUIContainer>
+                        <Border BorderBrush="#59252F" BorderThickness="1" Margin="10" Width="300" Height="200">
+                            <Image Source="imagenes/fondant_flor.jpg" Width="300" Height="200" Stretch="Fill"/>
+                        </Border>
+                    </BlockUIContainer>
+                </TableCell>
+                <TableCell>
+                    <BlockUIContainer>
+                        <Border BorderBrush="#59252F" BorderThickness="1" Margin="10" Width="300" Height="200">
+                            <Image Source="imagenes/rosas_crema.jpg" Width="300" Height="200" Stretch="Fill"/>
+                        </Border>
+                    </BlockUIContainer>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell>
+                    <BlockUIContainer>
+                        <Border BorderBrush="#59252F" BorderThickness="1" Margin="10" Width="300" Height="200">
+                            <Image Source="imagenes/chocolate_pastel.jpg" Width="300" Height="200" Stretch="Fill"/>
+                        </Border>
+                    </BlockUIContainer>
+                </TableCell>
+                <TableCell>
+                    <BlockUIContainer>
+                        <Border BorderBrush="#59252F" BorderThickness="1" Margin="10" Width="300" Height="200">
+                            <Image Source="imagenes/frutas_frescas.jpg" Width="300" Height="200" Stretch="Fill"/>
+                        </Border>
+                    </BlockUIContainer>
+                </TableCell>
+            </TableRow>
+        </TableRowGroup>
+    </Table>
+
+
+
+</FlowDocument>

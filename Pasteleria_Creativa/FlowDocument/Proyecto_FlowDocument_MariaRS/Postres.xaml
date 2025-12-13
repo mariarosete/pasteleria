@@ -1,0 +1,178 @@
+﻿<FlowDocument xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+              Background="#fff7e6"
+              FontFamily="Georgia"
+              PagePadding="20"
+              ColumnWidth="600" ColumnRuleBrush="Black" ColumnRuleWidth="3">
+
+    <!-- Título  -->
+    <Section FontSize="28" FontWeight="Bold" TextAlignment="Center" Foreground="#d35400">
+        <Paragraph>Postres Deliciosos</Paragraph>
+    </Section>
+
+    <!-- Descripción -->
+    <Paragraph FontSize="16">
+        Descubre una deliciosa variedad de postres, desde los clásicos como el Tiramisú hasta opciones refrescantes como el helado casero. 
+        Perfectos para cualquier ocasión especial y para satisfacer tu antojo dulce.
+    </Paragraph>
+
+    <!-- Sección Imágenes Destacadas -->
+    <Section FontStyle="Italic" Foreground="WhiteSmoke" FontFamily="Segoe Script" 
+     FontWeight="Bold" TextAlignment="Center" Background="#59252F">
+        <Paragraph>
+            Galería de imágenes
+        </Paragraph>
+    </Section>
+
+    <Table>
+        <Table.Columns>
+            <TableColumn Width="*"/>
+            <TableColumn Width="*"/>
+        </Table.Columns>
+        <TableRowGroup>
+            <TableRow>
+                <TableCell>
+                    <BlockUIContainer>
+                        <Border BorderBrush="#59252F" BorderThickness="1" Margin="10" Width="270" Height="200">
+                            <Image Source="imagenes/tiramisu.jpg" Width="270" Height="200" Stretch="Fill"/>
+                        </Border>
+                    </BlockUIContainer>
+                </TableCell>
+                <TableCell>
+                    <BlockUIContainer>
+                        <Border BorderBrush="#59252F" BorderThickness="1" Margin="10" Width="250" Height="200">
+                            <Image Source="imagenes/flan.jpg" Width="250" Height="200" Stretch="Fill"/>
+                        </Border>
+                    </BlockUIContainer>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell>
+                    <BlockUIContainer>
+                        <Border BorderBrush="#59252F" BorderThickness="1" Margin="10" Width="270" Height="200">
+                            <Image Source="imagenes/brownies.jpg" Width="270" Height="200" Stretch="Fill"/>
+                        </Border>
+                    </BlockUIContainer>
+                </TableCell>
+                <TableCell>
+                    <BlockUIContainer>
+                        <Border BorderBrush="#59252F" BorderThickness="1" Margin="10" Width="250" Height="200">
+                            <Image Source="imagenes/helado.jpg" Width="250" Height="200" Stretch="Fill"/>
+                        </Border>
+                    </BlockUIContainer>
+                </TableCell>
+            </TableRow>
+        </TableRowGroup>
+    </Table>
+
+    <!-- Postres Destacados -->
+    <Section FontSize="20" FontWeight="Bold" Foreground="#8B4513">
+        <Paragraph>Postres destacados</Paragraph>
+    </Section>
+
+    <!-- Tabla de Postres -->
+    <Table>
+        <Table.Columns>
+            <TableColumn Width="*"/>
+            <TableColumn Width="*"/>
+            <TableColumn Width="*"/>
+        </Table.Columns>
+        <TableRowGroup>
+            <TableRow Background="#FFDAB9">
+                <TableCell>
+                    <Paragraph FontWeight="Bold">Categoría</Paragraph>
+                </TableCell>
+                <TableCell>
+                    <Paragraph FontWeight="Bold">Postre</Paragraph>
+                </TableCell>
+                <TableCell>
+                    <Paragraph FontWeight="Bold">Descripción</Paragraph>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell>
+                    <Paragraph>Postres fríos</Paragraph>
+                </TableCell>
+                <TableCell>
+                    <Paragraph>Tiramisú</Paragraph>
+                </TableCell>
+                <TableCell>
+                    <Paragraph>Un postre italiano con capas de mascarpone y café.</Paragraph>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell>
+                    <Paragraph>Clásicos</Paragraph>
+                </TableCell>
+                <TableCell>
+                    <Paragraph>Flan de caramelo</Paragraph>
+                </TableCell>
+                <TableCell>
+                    <Paragraph>Suave, cremoso y con un toque dulce irresistible.</Paragraph>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell>
+                    <Paragraph>Chocolate</Paragraph>
+                </TableCell>
+                <TableCell>
+                    <Paragraph>Brownies</Paragraph>
+                </TableCell>
+                <TableCell>
+                    <Paragraph>Pequeñas porciones de chocolate intensamente deliciosas.</Paragraph>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell>
+                    <Paragraph>Helados</Paragraph>
+                </TableCell>
+                <TableCell>
+                    <Paragraph>Helado casero</Paragraph>
+                </TableCell>
+                <TableCell>
+                    <Paragraph>Refrescante y perfecto para cualquier época del año.</Paragraph>
+                </TableCell>
+            </TableRow>
+        </TableRowGroup>
+    </Table>
+
+    <!-- Consejos para la preparación -->
+    <Section FontSize="20" FontWeight="Bold" Foreground="#8B4513">
+        <Paragraph>Consejos para un resultado perfecto:</Paragraph>
+    </Section>
+
+    <List MarkerStyle="Circle">
+        <ListItem>
+            <Paragraph>Asegúrate de usar los ingredientes frescos para un mejor sabor.</Paragraph>
+        </ListItem>
+        <ListItem>
+            <Paragraph>Deja reposar el flan por algunas horas antes de servir.</Paragraph>
+        </ListItem>
+        <ListItem>
+            <Paragraph>Al preparar el tiramisú, utiliza café fuerte para un mejor sabor.</Paragraph>
+        </ListItem>
+    </List>
+
+    
+    <!-- Postre destacado -->
+    <Section>
+        <Paragraph FontSize="18" FontWeight="Bold" Foreground="#e67e22">Tiramisú</Paragraph>
+
+        <Paragraph>
+            <Floater HorizontalAlignment="Left" Width="180" Margin="10,10,10,10">
+                <BlockUIContainer>
+                    <Image Source="imagenes/tiramisu.jpg" Width="120" Height="120" Stretch="Uniform"/>
+                </BlockUIContainer>
+            </Floater>
+            El tiramisú es un clásico italiano que mezcla sabores dulces y amargos en capas suaves y cremosas, ideal para cualquier ocasión especial.
+        </Paragraph>
+    </Section>
+
+    <!-- Imagen flotando -->
+    <Section>
+        <Paragraph FontSize="16">
+            Al preparar tiramisú, recuerda usar café de buena calidad y el mascarpone más fresco para obtener el mejor sabor. ¡No te olvides del cacao espolvoreado al final!
+        </Paragraph>
+    </Section>
+
+</FlowDocument>

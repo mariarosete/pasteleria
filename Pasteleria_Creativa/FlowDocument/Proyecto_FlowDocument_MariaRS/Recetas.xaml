@@ -1,0 +1,206 @@
+﻿<FlowDocument xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+              Background="#fff7e6"
+              FontFamily="Georgia"
+              PagePadding="20"
+              ColumnWidth="600" ColumnRuleBrush="Black" ColumnRuleWidth="3">
+
+    <!-- Título  -->
+    <Section FontSize="28" FontWeight="Bold" TextAlignment="Center" Foreground="#d35400">
+        <Paragraph>Deliciosas Recetas de Pastelería</Paragraph>
+    </Section>
+
+    <!-- Descripción -->
+    <Paragraph FontSize="16">
+        Explora una variedad de recetas de pastelería para sorprender a tus amigos y familiares. ¡Aprende a preparar postres clásicos y modernos con un toque creativo!
+    </Paragraph>
+
+    <!-- Recetas Destacadas -->
+    <Section FontSize="20" FontWeight="Bold" Foreground="#8B4513">
+        <Paragraph>Recetas Destacadas</Paragraph>
+    </Section>
+
+    <!-- Tabla con recetas -->
+    <Table>
+        <Table.Columns>
+            <TableColumn Width="*"/>
+            <TableColumn Width="*"/>
+            <TableColumn Width="*"/>
+        </Table.Columns>
+        <TableRowGroup>
+            <TableRow Background="#FFDAB9">
+                <TableCell>
+                    <Paragraph FontWeight="Bold">Categoría</Paragraph>
+                </TableCell>
+                <TableCell>
+                    <Paragraph FontWeight="Bold">Receta</Paragraph>
+                </TableCell>
+                <TableCell>
+                    <Paragraph FontWeight="Bold">Descripción</Paragraph>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell>
+                    <Paragraph>Bizcochos</Paragraph>
+                </TableCell>
+                <TableCell>
+                    <Paragraph>Tarta de Chocolate</Paragraph>
+                </TableCell>
+                <TableCell>
+                    <Paragraph>Una tarta deliciosa con base de bizcocho de chocolate.</Paragraph>
+                </TableCell>
+            </TableRow>
+            <TableRow>
+                <TableCell>
+                    <Paragraph>Postres Fríos</Paragraph>
+                </TableCell>
+                <TableCell>
+                    <Paragraph>Cheesecake</Paragraph>
+                </TableCell>
+                <TableCell>
+                    <Paragraph>Suave y cremoso, ideal para los amantes de los postres fríos.</Paragraph>
+                </TableCell>
+            </TableRow>
+            
+            <TableRow>
+                <TableCell>
+                    <Paragraph>Postres Especiales</Paragraph>
+                </TableCell>
+                <TableCell>
+                    <Paragraph>Macarons de Frambuesa</Paragraph>
+                </TableCell>
+                <TableCell>
+                    <Paragraph>Delicados bocados franceses con un toque afrutado de frambuesa.</Paragraph>
+                </TableCell>
+            </TableRow>
+        </TableRowGroup>
+    </Table>
+
+    <!-- Consejos para Preparación -->
+    <Section FontSize="20" FontWeight="Bold" Foreground="#8B4513">
+        <Paragraph>Consejos para un resultado perfecto:</Paragraph>
+    </Section>
+
+    <List MarkerStyle="Square">
+        <ListItem>
+            <Paragraph>Asegúrate de medir todos los ingredientes con precisión para obtener la mejor textura.</Paragraph>
+        </ListItem>
+        <ListItem>
+            <Paragraph>Usa ingredientes frescos para un sabor óptimo, especialmente en los postres con frutas.</Paragraph>
+        </ListItem>
+        <ListItem>
+            <Paragraph>Deja que los postres se enfríen completamente antes de decorarlos o servirlos.</Paragraph>
+        </ListItem>
+    </List>
+   
+
+    <!-- Encabezado -->
+   
+    <Section FontStyle="Italic" Foreground="WhiteSmoke" FontFamily="Segoe Script" 
+         FontWeight="Bold" TextAlignment="Center" Background="#59252F">
+        <Paragraph>
+            Cheesecake
+        </Paragraph>
+    </Section>
+
+    <!-- Ingredientes -->
+    <Section FontSize="20" FontWeight="Bold" Foreground="#8B4513">
+        <Paragraph>Ingredientes:</Paragraph>
+    </Section>
+
+    <List>
+        <ListItem>
+            <Paragraph>200g galletas Digestive</Paragraph>
+        </ListItem>
+        <ListItem>
+            <Paragraph>100g mantequilla derretida</Paragraph>
+        </ListItem>
+        <ListItem>
+            <Paragraph>500g queso crema</Paragraph>
+        </ListItem>
+        <ListItem>
+            <Paragraph>200ml nata líquida</Paragraph>
+        </ListItem>
+        <ListItem>
+            <Paragraph>150g azúcar</Paragraph>
+        </ListItem>
+    </List>
+
+    <!-- Preparación -->
+    <Section FontSize="20" FontWeight="Bold" Foreground="#8B4513">
+        <Paragraph>Preparación:</Paragraph>
+    </Section>
+
+    <List MarkerStyle="Decimal">
+        <ListItem>
+            <Paragraph>Tritura galletas y mezcla con mantequilla.</Paragraph>
+        </ListItem>
+        <ListItem>
+            <Paragraph>Mezcla queso crema, azúcar, nata, y huevos.</Paragraph>
+        </ListItem>
+        <ListItem>
+            <Paragraph>Vierte la mezcla sobre las galletas y hornea a 160°C por 50 min.</Paragraph>
+        </ListItem>
+        <ListItem>
+            <Paragraph>Deja enfriar y refrigera antes de servir.</Paragraph>
+        </ListItem>
+    </List>
+
+
+    <!-- Sección Imágenes Destacadas -->
+    <Section FontStyle="Italic" Foreground="WhiteSmoke" FontFamily="Segoe Script" 
+         FontWeight="Bold" TextAlignment="Center" Background="#59252F">
+        <Paragraph>
+            IMÁGENES DESTACADAS
+        </Paragraph>
+    </Section>
+
+
+    <!-- Imágenes  -->
+    <Section>
+        <Table>
+            <Table.Columns>
+                <TableColumn Width="*"/>
+                <TableColumn Width="*"/>
+            </Table.Columns>
+            <TableRowGroup>
+                <TableRow>
+                    <TableCell>
+                        <BlockUIContainer>
+                            <Border BorderBrush="#59252F" BorderThickness="1" Margin="10" Width="300" Height="200">
+                                <Image Source="imagenes/tarta_choco.jpg" Width="300" Height="200" Stretch="Fill"/>
+                            </Border>
+                        </BlockUIContainer>
+                    </TableCell>
+                    <TableCell>
+                        <BlockUIContainer>
+                            <Border BorderBrush="#59252F" BorderThickness="1" Margin="10" Width="300" Height="200">
+                                <Image Source="imagenes/macarons.jpg" Width="300" Height="200" Stretch="Fill"/>
+                            </Border>
+                        </BlockUIContainer>
+                    </TableCell>
+                </TableRow>
+            </TableRowGroup>
+        </Table>
+
+    </Section>
+
+    <Section>
+        <Paragraph FontSize="18" FontWeight="Bold" Foreground="#e67e22">Tarta cheesecake</Paragraph>
+        <Paragraph>
+            <Floater HorizontalAlignment="Left" Width="180" Margin="10,10,10,10">
+                <BlockUIContainer>
+                    <Image Source="imagenes/cheesecake.jpg" Width="120" Height="120" Stretch="Uniform"/>
+                </BlockUIContainer>
+            </Floater>
+            Esta tarta es ideal para cualquier ocasión, y su sabor delicado la convierte en uno de los postres más apreciados.
+        </Paragraph>
+        <Paragraph FontSize="16">
+            La técnica de preparación de la Cheesecake permite experimentar con diferentes sabores y coberturas, desde frutas frescas hasta salsas de caramelo o chocolate, para darle un toque único a tu tarta.
+        </Paragraph>
+
+    </Section>
+
+
+
+</FlowDocument>

@@ -1,0 +1,394 @@
+﻿<Window x:Class="Proyecto_FlowDocument_MariaRS.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Pastelería Creativa" Height="1100" Width="1500"
+        Icon="/imagenes/postre.png">
+
+    <!--  Disparador basado en propiedad -->
+    <Window.Resources>
+        
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="#ff9966"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Margin" Value="10"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Width" Value="91"/>
+                    <Setter Property="Height" Value="35"/>
+                    <Setter Property="FontWeight" Value="Bold"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <!-- Estilo 1: Párrafos con fondo gris claro -->
+        <Style x:Key="Estilo1" TargetType="Paragraph">
+            <Setter Property="Background" Value="#f0f0f0"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+
+        <!-- Estilo 2: Párrafos con borde -->
+        <Style x:Key="Estilo2" TargetType="Paragraph">
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="Padding" Value="10"/>
+        </Style>
+
+        <!-- Estilo 3: Párrafos con color de texto #59252F -->
+        <Style x:Key="Estilo3" TargetType="Paragraph">
+            <Setter Property="Foreground" Value="#59252F"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+
+    </Window.Resources>
+
+    <DockPanel LastChildFill="True">
+
+        <!-- Título  -->
+        <Border Background="#D97F77" Padding="10" DockPanel.Dock="Top">
+            <TextBlock Text="PASTELERÍA CREATIVA" FontSize="30" FontWeight="Bold" Foreground="White" TextAlignment="Center"/>
+        </Border>
+
+        <!-- Imagen de Encabezado -->
+        <Image Source="imagenes/fondo.png" Height="150" Stretch="Fill" DockPanel.Dock="Top"/>
+
+        <!-- Barra de botones -->
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10" Background="#ffcc99">
+
+            <!-- Botón Inicio -->
+            <Button Name="btnInicio" Click="Inicio_Click" Margin="10" FontSize="14" Background="#ff9966" Foreground="White" ToolTip="Ir a Inicio">
+                <StackPanel Orientation="Vertical">
+                    <Image Source="imagenes/home.png" Width="20" Height="20" Margin="5"/>
+                </StackPanel>
+            </Button>
+
+            <!-- Secciones -->
+            <Button Name="btnRecetas" Content="Recetas" Click="Recetas_Click" Margin="10" FontSize="14" Background="#ff9966" Foreground="White" ToolTip="Ver Recetas"/>
+            <Button Name="btnPostres" Content="Postres" Click="Postres_Click" Margin="10" FontSize="14" Background="#ff9966" Foreground="White" ToolTip="Explorar Postres"/>
+            <Button Name="btnDecoraciones" Content="Decoraciones" Click="Decoraciones_Click" Margin="10" FontSize="14" Background="#ff9966" Foreground="White" ToolTip="Aprender Decoraciones"/>
+
+            <!-- Botón GUARDAR FlowDocument -->
+            <Button Name="btnGuardar" Click="Guardar_Click" Margin="10" FontSize="14" Background="#ff9966" Foreground="White" ToolTip="Guardar contenido">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="imagenes/guardar.png" Width="20" Height="20" Margin="5"/>
+                </StackPanel>
+            </Button>
+
+            <!-- Botón CARGAR FlowDocument -->
+            <Button Name="btnCargar" Click="Cargar_Click" Margin="10" FontSize="14" Background="#ff9966" Foreground="White" ToolTip="Cargar contenido">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="imagenes/cargar.png" Width="20" Height="20" Margin="5"/>
+                </StackPanel>
+            </Button>
+
+            <!-- Botón BORRAR FlowDocument -->
+            <Button Name="btnBorrar" Click="Borrar_Click" Margin="10" FontSize="14" Background="#ff9966" Foreground="White" ToolTip="Eliminar contenido">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="imagenes/eliminar.png" Width="20" Height="20" Margin="5"/>
+                </StackPanel>
+            </Button>
+
+            <!-- Botón IMPRIMIR FlowDocument -->
+            <Button Name="btnImprimir" Click="Imprimir_Click" Margin="10" FontSize="14" Background="#ff9966" Foreground="White" ToolTip="Imprimir documento">
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="imagenes/imprimir.png" Width="20" Height="20" Margin="5"/>
+                </StackPanel>
+            </Button>
+
+        </StackPanel>
+
+
+        <!-- FlowDocumentReader con el contenido -->
+        <FlowDocumentReader Name="fdReader" Foreground="Black" DockPanel.Dock="Left" >
+            
+            <!-- LÍNEA DIVISORIA para las columnas -->
+            <!-- Texto OCUPANDO VARIAS COLUMNAS -->
+            <FlowDocument Background="#fff7e6" FontFamily="Georgia" PagePadding="20"
+              ColumnWidth="600" ColumnRuleBrush="Black" ColumnRuleWidth="3">
+
+                <!-- Título Principal -->
+                <Section FontSize="28" FontWeight="Bold" TextAlignment="Center" Foreground="#d35400">
+                    <Paragraph>Bienvenidos a Pastelería Creativa</Paragraph>
+                </Section>
+
+                <!-- SECCIÓN FORMATEADA -->
+                <Section FontStyle="Italic" Foreground="WhiteSmoke" FontFamily="Segoe Script" 
+                         FontWeight="Bold" TextAlignment="Center" Background="#59252F">
+                    <Paragraph>
+                        IMÁGENES DESTACADAS
+                    </Paragraph>
+                </Section>
+
+                <!-- Sección con Imágenes OCUPANDO VARIAS COLUMNAS -->
+                <Section>
+                    
+                    <!-- Imagen organizada en columnas -->
+                    <Table>
+                        <Table.Columns>
+                            <TableColumn Width="*"/>
+                            <TableColumn Width="*"/>
+                            <TableColumn Width="*"/>
+                        </Table.Columns>
+                        <TableRowGroup>
+                            <TableRow>
+                                
+                                <!-- Celda con imagen -->
+                                <TableCell>
+                                    <BlockUIContainer>
+                                        <Image Source="imagenes/cupcake.jpg" Height="200" Width="250" Margin="10">
+                                            <Image.Triggers>
+
+                                                <!-- Disparador Basado en Evento para cambiar el tamaño -->
+                                                <EventTrigger RoutedEvent="Image.MouseLeftButtonDown">
+                                                    <BeginStoryboard>
+                                                        <Storyboard>
+                                                            <DoubleAnimation Storyboard.TargetProperty="Width" To="300" Duration="0:0:0.2"/>
+                                                            <DoubleAnimation Storyboard.TargetProperty="Height" To="250" Duration="0:0:0.2"/>
+                                                        </Storyboard>
+                                                    </BeginStoryboard>
+                                                </EventTrigger>
+                                            </Image.Triggers>
+                                        </Image>
+                                    </BlockUIContainer>
+                                </TableCell>
+                                <TableCell>
+                                    <BlockUIContainer>
+                                        <Image Source="imagenes/tarta.jpg" Height="200" Width="250" Margin="10">
+                                            <Image.Triggers>
+
+                                                <!-- Disparador Basado en Evento para cambiar el tamaño -->
+                                                <EventTrigger RoutedEvent="Image.MouseLeftButtonDown">
+                                                    <BeginStoryboard>
+                                                        <Storyboard>
+                                                            <DoubleAnimation Storyboard.TargetProperty="Width" To="300" Duration="0:0:0.2"/>
+                                                            <DoubleAnimation Storyboard.TargetProperty="Height" To="250" Duration="0:0:0.2"/>
+                                                        </Storyboard>
+                                                    </BeginStoryboard>
+                                                </EventTrigger>
+                                            </Image.Triggers>
+                                        </Image>
+                                    </BlockUIContainer>
+                                </TableCell>
+                                <TableCell>
+                                    <BlockUIContainer>
+                                        <Image Source="imagenes/cupcake2.jpg" Height="200" Width="250" Margin="10">
+                                            <Image.Triggers>
+                                                <!-- Disparador Basado en Evento para cambiar el tamaño -->
+                                                <EventTrigger RoutedEvent="Image.MouseLeftButtonDown">
+                                                    <BeginStoryboard>
+                                                        <Storyboard>
+                                                            <DoubleAnimation Storyboard.TargetProperty="Width" To="300" Duration="0:0:0.2"/>
+                                                            <DoubleAnimation Storyboard.TargetProperty="Height" To="250" Duration="0:0:0.2"/>
+                                                        </Storyboard>
+                                                    </BeginStoryboard>
+                                                </EventTrigger>
+                                            </Image.Triggers>
+                                        </Image>
+                                    </BlockUIContainer>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>
+                                    <BlockUIContainer>
+                                        <Image Source="imagenes/cookies.jpg" Height="200" Width="250" Margin="10">
+                                            <Image.Triggers>
+                                                <!-- Disparador Basado en Evento para cambiar el tamaño -->
+                                                <EventTrigger RoutedEvent="Image.MouseLeftButtonDown">
+                                                    <BeginStoryboard>
+                                                        <Storyboard>
+                                                            <DoubleAnimation Storyboard.TargetProperty="Width" To="300" Duration="0:0:0.2"/>
+                                                            <DoubleAnimation Storyboard.TargetProperty="Height" To="250" Duration="0:0:0.2"/>
+                                                        </Storyboard>
+                                                    </BeginStoryboard>
+                                                </EventTrigger>
+                                            </Image.Triggers>
+                                        </Image>
+                                    </BlockUIContainer>
+                                </TableCell>
+                                <TableCell>
+                                    <BlockUIContainer>
+                                        <Image Source="imagenes/pastel.jpg" Height="200" Width="250" Margin="10">
+                                            <Image.Triggers>
+                                                <!-- Disparador Basado en Evento para cambiar el tamaño -->
+                                                <EventTrigger RoutedEvent="Image.MouseLeftButtonDown">
+                                                    <BeginStoryboard>
+                                                        <Storyboard>
+                                                            <DoubleAnimation Storyboard.TargetProperty="Width" To="300" Duration="0:0:0.2"/>
+                                                            <DoubleAnimation Storyboard.TargetProperty="Height" To="250" Duration="0:0:0.2"/>
+                                                        </Storyboard>
+                                                    </BeginStoryboard>
+                                                </EventTrigger>
+                                            </Image.Triggers>
+                                        </Image>
+                                    </BlockUIContainer>
+                                </TableCell>
+                                <TableCell>
+                                    <BlockUIContainer>
+                                        <Image Source="imagenes/tarta2.jpg" Height="200" Width="250" Margin="10">
+                                            <Image.Triggers>
+                                                <!-- Disparador Basado en Evento para cambiar el tamaño -->
+                                                <EventTrigger RoutedEvent="Image.MouseLeftButtonDown">
+                                                    <BeginStoryboard>
+                                                        <Storyboard>
+                                                            <DoubleAnimation Storyboard.TargetProperty="Width" To="300" Duration="0:0:0.2"/>
+                                                            <DoubleAnimation Storyboard.TargetProperty="Height" To="250" Duration="0:0:0.2"/>
+                                                        </Storyboard>
+                                                    </BeginStoryboard>
+                                                </EventTrigger>
+                                            </Image.Triggers>
+                                        </Image>
+                                    </BlockUIContainer>
+                                </TableCell>
+                            </TableRow>
+                        </TableRowGroup>
+                    </Table>
+                </Section>
+
+
+                <!-- Imagen en LÍNEA con el texto -->
+                <Section >
+                    <Paragraph Style="{StaticResource Estilo1}">
+                        En la pastelería creativa, los postres son tan deliciosos como visualmente atractivos.
+                        <InlineUIContainer>
+                            <Image Source="imagenes/cookies.jpg" Width="60" Height="60" Margin="5"/>
+                        </InlineUIContainer>
+                        Aquí puedes ver algunas cookies decoradas con glaseado y perlas de azúcar.
+                    </Paragraph>
+                </Section>
+                                
+                <!-- LISTA CON VIÑETAS  -->
+                <Section FontStyle="Italic" Foreground="WhiteSmoke" FontFamily="Segoe Script" 
+                         FontWeight="Bold" TextAlignment="Center" Background="#59252F">
+                    <Paragraph>
+                        Secciones Destacadas
+                    </Paragraph>
+                </Section>
+                <List>
+                    <ListItem>
+                        <Paragraph>
+                            <Bold>Recetas:</Bold> Descubre nuevas ideas y sabores.
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            <Bold>Postres:</Bold> Aprende a preparar dulces irresistibles.
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            <Bold>Decoraciones:</Bold> Dale un toque especial a tus creaciones.
+                        </Paragraph>
+                    </ListItem>
+                </List>
+
+                <!-- TABLA CON COMBINACIÓN DE CELDAS  -->
+                <Section>
+                    <Table>
+                        <TableRowGroup>
+                            <TableRow Background="#59252F" Foreground="White">
+                                <TableCell ColumnSpan="3">
+                                    <Paragraph TextAlignment="Center">Tipos de Preparaciones en Pastelería</Paragraph>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow Background="#FFDAB9">
+                                <TableCell>
+                                    <Paragraph FontWeight="Bold">Categoría</Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph FontWeight="Bold">Ejemplo</Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph FontWeight="Bold">Dificultad</Paragraph>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>
+                                    <Paragraph>Bizcochos</Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph>Tarta de chocolate</Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph>Media</Paragraph>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>
+                                    <Paragraph>Postres fríos</Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph>Cheesecake</Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph>Fácil</Paragraph>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>
+                                    <Paragraph>Decoraciones</Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph>Flores de fondant</Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph>Avanzada</Paragraph>
+                                </TableCell>
+                            </TableRow>
+                        </TableRowGroup>
+                    </Table>
+                </Section>
+
+                <!-- Imagen FLOTANDO con el texto -->
+                <Section>
+                    <Paragraph FontSize="18" FontWeight="Bold" Foreground="#e67e22">
+                        Técnicas de decoración avanzadas
+                    </Paragraph>
+                    <Paragraph>
+                        <Floater HorizontalAlignment="Left" Width="126" Margin="10,10,10,10">
+                            <BlockUIContainer>
+                                <Border BorderBrush="#59252F" BorderThickness="1" Width="110" Height="100">
+                                    <Image Source="imagenes/fondant.jpg" Width="110" Height="100" Stretch="Fill"/>
+                                </Border>
+                            </BlockUIContainer>
+                        </Floater>
+                        Un cupcake con decoraciones en fondant. Esta técnica permite crear formas increíbles como flores, lazos y figuras personalizadas.
+                    </Paragraph>
+                </Section>
+
+                <Section>
+                    <Paragraph FontSize="18" FontWeight="Bold" Foreground="#e67e22">Decoraciones creativas</Paragraph>
+                    <Paragraph Style="{StaticResource Estilo3}">
+                        
+                        La decoración con fondant es una técnica versátil y artística para personalizar postres.
+                    </Paragraph>
+                </Section>
+
+                <Section>
+                    <!-- IMAGEN EN UN PÁRRAFO A PARTE DEL TEXTO -->
+                    <Paragraph TextAlignment="Center">
+                        <InlineUIContainer>
+                            <Border BorderBrush="#59252F" Height="200" Width="350" BorderThickness="1" Padding="5" HorizontalAlignment="Center">
+                                <Image Source="imagenes/tecnica_foundant.jpg" Height="200" Width="350" Stretch="Fill"/>
+                            </Border>
+                        </InlineUIContainer>
+                    </Paragraph>
+                </Section>
+
+                <!-- Hipervínculo -->
+                <Section>
+                    <Paragraph Style="{StaticResource Estilo2}">
+                        Para más información, visita nuestro sitio web:
+                        <Hyperlink NavigateUri="https://es.wikipedia.org/wiki/Pasteler%C3%ADa_creativa" RequestNavigate="Hyperlink_RequestNavigate">
+                            Pastelería Creativa
+                        </Hyperlink>
+
+                    </Paragraph>
+                </Section>
+                
+
+            </FlowDocument>
+        </FlowDocumentReader>
+
+    </DockPanel>
+</Window>
