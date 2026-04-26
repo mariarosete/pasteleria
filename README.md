@@ -13,7 +13,7 @@ Proyecto de interfaz desarrollado con **WPF (C#)** orientado al mundo de la **pa
 
 Puedes ver el funcionamiento de la aplicación aquí:
 
-👉 http://localhost:5173/src/assets/flowDocument.mp4
+👉 https://mariarosete.vercel.app/assets/flowDocument-BkDYHWvr.mp4
 
 🖥️ Aplicación de escritorio desarrollada con WPF.
 
