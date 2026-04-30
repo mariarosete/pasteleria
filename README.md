@@ -25,7 +25,7 @@ Permite gestionar recetas de repostería y visualizar contenido estructurado con
 
 ---
 
-## 🚀 Funcionalidades destacadas
+## Funcionalidades destacadas
 
 ### 📄 FlowDocument
 - Contenido estructurado en secciones (recetas, postres, decoraciones)  
@@ -52,7 +52,7 @@ Permite gestionar recetas de repostería y visualizar contenido estructurado con
 
 ---
 
-## 🧠 Aspectos técnicos
+## Aspectos técnicos
 
 - Uso avanzado de **FlowDocument** (columnas, tablas, estilos)  
 - Implementación de **triggers y animaciones** en WPF  
@@ -61,7 +61,7 @@ Permite gestionar recetas de repostería y visualizar contenido estructurado con
 
 ---
 
-## 🎯 Objetivo del proyecto
+## Objetivo del proyecto
 
 - Practicar interfaces avanzadas en **WPF**  
 - Implementar interacciones con triggers y eventos  
